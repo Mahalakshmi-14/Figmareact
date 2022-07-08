@@ -1,0 +1,68 @@
+.SideBar {
+  height: 100vh;
+  background: #ffffff;
+}
+.ant-layout-sider,
+.ant-layout-sider-dark,
+.SideBar {
+  flex: 0 0 200px !important;
+  max-width: 70px !important;
+  min-width: 50px !important;
+  width: 200px !important;
+}
+.Logo img {
+  width: 70px;
+  height: 70px;
+}
+
+.middleIcon img {
+  width: 40px;
+  height: 40px;
+}
+.ant-menu-item,
+.ant-menu-item-only-child {
+  padding-left: 10px !important;
+}
+.ant-menu-item,
+.ant-menu-item-only-child,
+.one {
+  padding-left: 10px !important;
+}
+.bottomIcon {
+  width: 50px;
+  height: 50px;
+  margin: 60px 15px;
+}
+.bottomIcon img {
+  margin-top: 25px;
+  margin-right: 25px;
+}
+.ant-layout-header {
+  background: lightblue !important;
+}
+.ant-layout {
+  background: lightblue;
+}
+.Workflow {
+  font-weight: 700;
+  font-size: 28px;
+  float: left;
+}
+.ant-btn-primary {
+  width: 150px !important;
+
+  margin-top: 20px;
+  margin-left: 40px;
+}
+.SearchInput {
+  margin-top: 10px;
+  padding-left: 10px;
+}
+.midhead Input {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #002f68;
+}
+.CreateBtn {
+  float: right;
+}

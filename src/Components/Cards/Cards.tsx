@@ -8,6 +8,7 @@ type cardtype = {
   description: string;
   info1: string;
   info2: string;
+  image: string;
 };
 const Cards = (props: cardtype) => (
   <Row>
@@ -16,7 +17,7 @@ const Cards = (props: cardtype) => (
         <Card className="card-width">
           <div className="card-one">
             <div style={{ marginRight: "30px" }}>
-              <img src={img1} width={40} className="avatar"></img>
+              <img src={props.image} width={40} className="avatar"></img>
             </div>
 
             <div className="cardhover1">

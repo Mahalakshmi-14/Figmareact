@@ -12,6 +12,7 @@ const Map = () => {
           <div className="mappingcard">
             <Cards
               key={card.e_id}
+              image={card.image}
               title={card.title}
               description={card.description}
               info1={card.content}

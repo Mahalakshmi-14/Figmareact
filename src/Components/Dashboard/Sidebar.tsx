@@ -15,7 +15,7 @@ import img6 from "../Images/L6.svg";
 import img7 from "../Images/L7.svg";
 import img8 from "../Images/L8.png";
 import img9 from "../Images/L9.svg";
-import img10 from "../Images/C1.png";
+// import img10 from "../Images/C1.png";
 import Map from "../Cards/Map";
 
 const style: React.CSSProperties = { background: "#0092ff", padding: "8px 0" };

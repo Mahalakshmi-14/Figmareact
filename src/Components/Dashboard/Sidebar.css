@@ -38,10 +38,10 @@
   margin-right: 25px;
 }
 .ant-layout-header {
-  background: lightblue !important;
+  background: #f4f9ff;
 }
 .ant-layout {
-  background: lightblue;
+  background: #f4f9ff;
 }
 .Workflow {
   font-weight: 700;

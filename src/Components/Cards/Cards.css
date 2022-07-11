@@ -76,8 +76,8 @@ h3 {
   display: flex;
 }
 .card-width {
-  width: 300px;
-  border-radius: 10px;
+  width: 290px;
+  border-radius: 15px;
 }
 .site-card-border-less-wrapper {
   border-radius: 10px;

@@ -5,6 +5,9 @@ import { Col, Row } from "antd";
 import { Input, Button, Card } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 import "./Sidebar.css";
+import { Modal } from "antd";
+import { useState } from "react";
+
 //const { Content } = Layout;
 import img1 from "../Images/L1.svg";
 import img2 from "../Images/L2.svg";
@@ -17,12 +20,28 @@ import img8 from "../Images/L8.png";
 import img9 from "../Images/L9.svg";
 // import img10 from "../Images/C1.png";
 import Map from "../Cards/Map";
+import Imageselector from "../Imageselector/Imageselector";
+import Popupform from "../Imageselector/Form";
 
 const style: React.CSSProperties = { background: "#0092ff", padding: "8px 0" };
 const { Search } = Input;
 const { Header, Content, Sider } = Layout;
 
 function Sidebar() {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const showModal = () => {
+    setIsModalVisible(true);
+  };
+
+  const handleOk = () => {
+    setIsModalVisible(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
+
   return (
     <div>
       <Layout>
@@ -69,9 +88,29 @@ function Sidebar() {
                 <Input placeholder="Search" prefix={<SearchOutlined />}></Input>
               </Col>
               <Col span={8}>
-                <Button type="primary" className="CreateBtn">
+                <Button
+                  type="primary"
+                  className="CreateBtn"
+                  onClick={showModal}
+                >
                   Create Workflow
                 </Button>
+                <Modal
+                  title="Basic Modal"
+                  visible={isModalVisible}
+                  onOk={handleOk}
+                  onCancel={handleCancel}
+                  footer={null}
+                >
+                  <Row>
+                    <Col span={8}>
+                      <Imageselector />
+                    </Col>
+                    <Col span={16}>
+                      <Popupform />
+                    </Col>
+                  </Row>
+                </Modal>
               </Col>
             </Row>
           </Header>

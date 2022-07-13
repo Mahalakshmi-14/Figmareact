@@ -1,0 +1,11 @@
+.ant-input {
+  border: 0 !important;
+}
+.Inputfield {
+  border-bottom: 2px solid #2b78d4 !important;
+}
+.ant-upload.ant-upload-select-picture-card {
+  width: 127px !important;
+
+  height: 155px !important;
+}

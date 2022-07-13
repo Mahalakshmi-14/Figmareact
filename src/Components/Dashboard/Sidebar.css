@@ -55,8 +55,8 @@
   margin-left: 40px;
 }
 .SearchInput {
-  margin-top: 10px;
-  padding-left: 10px;
+  margin-top: 5px;
+  padding-left: 5px;
 }
 .midhead Input {
   border-radius: 5px;
@@ -65,4 +65,6 @@
 }
 .CreateBtn {
   float: right;
+  margin-top: 25px !important;
+  margin-left: 1ox !important;
 }

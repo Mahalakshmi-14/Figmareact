@@ -32,7 +32,9 @@ const Cards = (props: cardtype) => (
           <div className="hover-effect">
             <span className="hover-effect-para">{props.info2}</span>
             <br></br>
-            <Button type="primary">View Details</Button>
+
+            <Button className="viewdetails">View Details</Button>
+            <Button className="delete">Delete</Button>
           </div>
         </Card>
       </div>

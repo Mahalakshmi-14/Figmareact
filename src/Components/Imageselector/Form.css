@@ -6,6 +6,31 @@
 }
 .ant-upload.ant-upload-select-picture-card {
   width: 127px !important;
-
   height: 155px !important;
+}
+.Inputfield {
+  margin: 10px;
+}
+.ant-col .ant-col-8 .ant-form-item-label {
+  display: inline-block !important;
+  font-size: 10px !important;
+  /* margin-bottom: 10px !important; */
+}
+label:nth-child(2) {
+  margin-top: -1;
+  display: none;
+}
+.ant-form-item-required {
+  margin-top: 20px;
+  font-size: 10px !important;
+}
+.ant-form-item-label > label {
+  font-size: 10px;
+  height: 2px !important;
+}
+.ant-form-item-control-input-content {
+  margin-top: -6px !important;
+}
+.ant-form-item {
+  margin-bottom: 5px;
 }

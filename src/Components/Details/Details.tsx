@@ -6,7 +6,7 @@ const details = [
     description: "WF_PO_PROCESSING_STD2",
     content: "Leave application for admin approval",
     details:
-      "This workflow is to enable an empoyee raise his leave request and get it approved it from him reporting manager.",
+      "This workflow is to enable an employee raise his leave request and get it approved it from him reporting manager.",
   },
   {
     e_id: "2",
@@ -15,7 +15,7 @@ const details = [
     description: "WF_PO_PROCESSING_STD2",
     content: "Leave application for admin approval",
     details:
-      "This workflow is to enable an empoyee raise his leave request and get it approved it from him reporting manager.",
+      "This workflow is to enable an employee raise his leave request and get it approved it from him reporting manager.",
   },
   {
     e_id: "3",
@@ -24,7 +24,7 @@ const details = [
     description: "WF_PO_PROCESSING_STD2",
     content: "Leave application for admin approval",
     details:
-      "This workflow is to enable an empoyee raise his leave request and get it approved it from him reporting manager.",
+      "This workflow is to enable an employee raise his leave request and get it approved it from him reporting manager.",
   },
   {
     e_id: "4",
@@ -33,7 +33,7 @@ const details = [
     description: "WF_PO_PROCESSING_STD2",
     content: "Leave application for admin approval",
     details:
-      "This workflow is to enable an empoyee raise his leave request and get it approved it from him reporting manager.",
+      "This workflow is to enable an employee raise his leave request and get it approved it from him reporting manager.",
   },
   {
     e_id: "5",
@@ -42,7 +42,7 @@ const details = [
     description: "WF_PO_PROCESSING_STD2",
     content: "Leave application for admin approval",
     details:
-      "This workflow is to enable an empoyee raise his leave request and get it approved it from him reporting manager.",
+      "This workflow is to enable an employee raise his leave request and get it approved it from him reporting manager.",
   },
   {
     e_id: "6",
@@ -51,7 +51,7 @@ const details = [
     description: "WF_PO_PROCESSING_STD2",
     content: "Leave application for admin approval",
     details:
-      "This workflow is to enable an empoyee raise his leave request and get it approved it from him reporting manager.",
+      "This workflow is to enable an employee raise his leave request and get it approved it from him reporting manager.",
   },
   {
     e_id: "7",
@@ -60,7 +60,7 @@ const details = [
     description: "WF_PO_PROCESSING_STD2",
     content: "Leave application for admin approval",
     details:
-      "This workflow is to enable an empoyee raise his leave request and get it approved it from him reporting manager.",
+      "This workflow is to enable an employee raise his leave request and get it approved it from him reporting manager.",
   },
   {
     e_id: "8",
@@ -69,7 +69,7 @@ const details = [
     description: "WF_PO_PROCESSING_STD2",
     content: "Leave application for admin approval",
     details:
-      "This workflow is to enable an empoyee raise his leave request and get it approved it from him reporting manager.",
+      "This workflow is to enable an employee raise his leave request and get it approved it from him reporting manager.",
   },
   {
     e_id: "9",
@@ -87,7 +87,7 @@ const details = [
     description: "WF_PO_PROCESSING_STD2",
     content: "Leave application for admin approval",
     details:
-      "This workflow is to enable an empoyee raise his leave request and get it approved it from him reporting manager.",
+      "This workflow is to enable an employee raise his leave request and get it approved it from him reporting manager.",
   },
   {
     e_id: "11",
@@ -96,7 +96,7 @@ const details = [
     description: "WF_PO_PROCESSING_STD2",
     content: "Leave application for admin approval",
     details:
-      "This workflow is to enable an empoyee raise his leave request and get it approved it from him reporting manager.",
+      "This workflow is to enable an employee raise his leave request and get it approved it from him reporting manager.",
   },
   {
     e_id: "12",
@@ -105,7 +105,7 @@ const details = [
     description: "WF_PO_PROCESSING_STD2",
     content: "Leave application for admin approval",
     details:
-      "This workflow is to enable an empoyee raise his leave request and get it approved it from him reporting manager.",
+      "This workflow is to enable an employee raise his leave request and get it approved it from him reporting manager.",
   },
   {
     e_id: "13",
@@ -114,7 +114,7 @@ const details = [
     description: "WF_PO_PROCESSING_STD2",
     content: "Leave application for admin approval",
     details:
-      "This workflow is to enable an empoyee raise his leave request and get it approved it from him reporting manager.",
+      "This workflow is to enable an employee raise his leave request and get it approved it from him reporting manager.",
   },
   {
     e_id: "14",
@@ -123,7 +123,7 @@ const details = [
     description: "WF_PO_PROCESSING_STD2",
     content: "Leave application for admin approval",
     details:
-      "This workflow is to enable an empoyee raise his leave request and get it approved it from him reporting manager.",
+      "This workflow is to enable an employee raise his leave request and get it approved it from him reporting manager.",
   },
   {
     e_id: "15",
@@ -132,7 +132,7 @@ const details = [
     description: "WF_PO_PROCESSING_STD2",
     content: "Leave application for admin approval",
     details:
-      "This workflow is to enable an empoyee raise his leave request and get it approved it from him reporting manager.",
+      "This workflow is to enable an employee raise his leave request and get it approved it from him reporting manager.",
   },
   {
     e_id: "16",
@@ -141,7 +141,7 @@ const details = [
     description: "WF_PO_PROCESSING_STD2",
     content: "Leave application for admin approval",
     details:
-      "This workflow is to enable an empoyee raise his leave request and get it approved it from him reporting manager.",
+      "This workflow is to enable an employee raise his leave request and get it approved it from him reporting manager.",
   },
 ];
 export default details;

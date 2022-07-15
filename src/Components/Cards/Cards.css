@@ -16,12 +16,16 @@
   color: #5c83b1;
 }
 
-.info1 {
+.cardhover1 .info1 {
   font-weight: 400;
   margin-right: 20px;
   margin-top: -9px;
-  color: "#5C83B1";
+  color: "#5c83b1" !important;
 }
+.cardhover1 p {
+  color: "#5c83b1" !important;
+}
+
 .ant-card-body {
   padding: 10px;
 }
@@ -48,7 +52,7 @@ h3 {
   color: #7d7d7d;
 }
 .hover-effect .delete {
-  margin-left: 40px;
+  margin-left: 30px;
   border-radius: 5px;
   padding: 4px 20px 4px 20px;
   color: #2b78d4;

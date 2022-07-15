@@ -48,9 +48,10 @@
   font-size: 28px;
   float: left;
 }
+.ant-btn,
 .ant-btn-primary {
-  width: 150px !important;
-
+  width: 4px 27px !important;
+  padding: 4px 27px !important;
   margin-top: 20px;
   margin-left: 40px;
 }
@@ -67,4 +68,9 @@
   float: right;
   margin-top: 25px !important;
   margin-left: 1ox !important;
+}
+.ant-btn,
+.ant-btn-primary {
+  margin-top: -10px;
+  line-height: 0.5715;
 }

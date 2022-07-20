@@ -103,3 +103,30 @@ h3 {
 .site-card-border-less-wrapper {
   border-radius: 10px;
 }
+.deletebtn {
+  margin-right: 170px;
+}
+.viewdetailsbtn {
+  /* width: 40%; */
+  margin-top: -32px;
+}
+.ant-modal-content {
+  height: 400px !important;
+}
+
+@media (max-width: 1024px) {
+  .Cards {
+    grid-template-columns: auto auto auto;
+  }
+}
+@media (max-width: 786px) {
+  .Cards {
+    grid-template-columns: auto auto;
+  }
+}
+@media (max-width: 425px) {
+  .Cards {
+    grid-template-columns: auto;
+    
+  }
+}

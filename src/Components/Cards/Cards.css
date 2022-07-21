@@ -127,6 +127,12 @@ h3 {
 @media (max-width: 425px) {
   .Cards {
     grid-template-columns: auto;
-    
   }
 }
+.Inputfield {
+  font: Montserrat;
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(0, 47, 104, 1);
+}
+

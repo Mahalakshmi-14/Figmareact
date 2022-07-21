@@ -5,6 +5,7 @@ import "./Form.css";
 const { TextArea } = Input;
 
 const Popupform: React.FC = () => {
+  const [form] = Form.useForm();
   const onFinish = (values: any) => {
     console.log("Success:", values);
   };
@@ -28,9 +29,11 @@ const Popupform: React.FC = () => {
     console.log(formValue);
     formdetail.push(formValue);
     localStorage.setItem("Employeedetails", JSON.stringify(formdetail));
+    form.resetFields();
   };
   return (
     <Form
+      form={form}
       name="basic"
       labelCol={{ span: 8 }}
       wrapperCol={{ span: 16 }}
@@ -65,7 +68,7 @@ const Popupform: React.FC = () => {
       <Form.Item className="empdetails" label="Employee Details">
         <TextArea
           rows={4}
-          className="Inputfield"
+          className="Inputfield1"
           value={Employeedetails}
           onChange={(e) => setEmployeedetails(e.target.value)}
         />
@@ -82,7 +85,3 @@ const Popupform: React.FC = () => {
 };
 
 export default Popupform;
- 
-
-
-

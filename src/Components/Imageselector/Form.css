@@ -8,9 +8,9 @@
   width: 127px !important;
   height: 155px !important;
 }
-.Inputfield {
-  margin: 10px;
-}
+/* .Inputfield {
+  margin: 10px; */
+
 .ant-col .ant-col-8 .ant-form-item-label {
   display: inline-block !important;
   font-size: 10px !important;
@@ -33,4 +33,10 @@ label:nth-child(2) {
 }
 .ant-form-item {
   margin-bottom: 5px;
+}
+.Inputfield1 {
+  font: Montserrat;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(0, 47, 104, 1);
 }

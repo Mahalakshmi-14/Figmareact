@@ -16,7 +16,6 @@ import img1 from "../Images/L1.svg";
 const { TextArea } = Input;
 // import "../Imageselector/Form.css";
 
-
 type cardtype = {
   name: string;
   designation: string;
@@ -51,7 +50,10 @@ const Cards = (props: cardtype) => {
                 </div>
               </div>
               <div className="hover-effect">
-                <span className="hover-effect-para">This workflow is to enable an employee raise his leave request and get it approved it from him reporting manager</span>
+                <span className="hover-effect-para">
+                  This workflow is to enable an employee raise his leave request
+                  and get it approved it from him reporting manager
+                </span>
                 <br></br>
                 <span>
                   <Button className="deletebtn">Delete</Button>
@@ -74,11 +76,7 @@ const Cards = (props: cardtype) => {
                 >
                   <div className="card-one">
                     <div style={{ marginRight: "30px" }}>
-                      <img
-                        src={img1}
-                        width={40}
-                        className="avatar"
-                      ></img>
+                      <img src={img1} width={40} className="avatar"></img>
                     </div>
 
                     <div className="cardhover1">
@@ -97,51 +95,33 @@ const Cards = (props: cardtype) => {
                     initialValues={{ remember: true }}
                     autoComplete="off"
                   >
-                    <Form.Item
-                      label="Employee Name"
-                      name="Employeename"
-                      rules={[
-                        {
-                          required: true,
-                          message: "Please input your username!",
-                        },
-                      ]}
-                    >
+                    <Form.Item label="Employee Name">
                       <Input
                         className="Inputfield"
-                        value={Employeename}
-                        onChange={(e) => setEmployeename(e.target.value)}
+                        value={props.name}
+                        // onChange={(e) => setEmployeename(e.target.value)}
                       />
                     </Form.Item>
 
-                    <Form.Item
-                      label="Designation"
-                      name="Designation"
-                      rules={[
-                        {
-                          required: true,
-                          message: "Please input your username!",
-                        },
-                      ]}
-                    >
+                    <Form.Item label="Designation">
                       <Input
                         className="Inputfield"
-                        value={Designation}
-                        onChange={(e) => setDesignation(e.target.value)}
+                        value={props.designation}
+                        // onChange={(e) => setDesignation(e.target.value)}
                       />
                     </Form.Item>
                     <Form.Item className="empdetails" label="Employee Details">
                       <TextArea
                         rows={4}
-                        className="Inputfield"
-                        value={Employeedetails}
-                        onChange={(e) => setEmployeedetails(e.target.value)}
+                        className="Inputfield1"
+                        value={props.employeedetails}
+                        // onChange={(e) => setEmployeedetails(e.target.value)}
                       />
                     </Form.Item>
 
                     <Button>Cancel</Button>
                     <span>
-                      <Button type="primary">Save</Button>
+                      <Button type="primary">Edit</Button>
                     </span>
                   </Form>
                 </Modal>

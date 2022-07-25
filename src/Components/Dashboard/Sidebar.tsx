@@ -6,7 +6,8 @@ import { Input, Button, Card } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 import "./Sidebar.css";
 import { Modal } from "antd";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Cards from "../Cards/Cards";
 
 //const { Content } = Layout;
 import img1 from "../Images/L1.svg";
@@ -19,8 +20,8 @@ import img7 from "../Images/L7.svg";
 import img8 from "../Images/L8.png";
 import img9 from "../Images/L9.svg";
 // import img10 from "../Images/C1.png";
-import Map from "../Cards/Map";
-import Imageselector from "../Imageselector/Imageselector";
+
+
 import Popupform from "../Imageselector/Form";
 
 const style: React.CSSProperties = { background: "#0092ff", padding: "8px 0" };
@@ -28,18 +29,18 @@ const { Search } = Input;
 const { Header, Content, Sider } = Layout;
 
 function Sidebar() {
-  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [cardData, setCardData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const showModal = () => {
-    setIsModalVisible(true);
-  };
-
-  const handleOk = () => {
-    setIsModalVisible(false);
-  };
-
-  const handleCancel = () => {
-    setIsModalVisible(false);
+  useEffect(() => {
+    let employeeDetail = JSON.parse(
+      `${localStorage.getItem("Employeedetails")}`
+    );
+    setCardData(employeeDetail);
+    setLoading(false);
+  }, [loading]);
+  const refresh = () => {
+    setLoading(true);
   };
 
   return (
@@ -63,7 +64,7 @@ function Sidebar() {
               <img src={img3} />
             </Menu.Item>
             <Menu.Item>
-              <img src={img4} className="one" />
+              <img src={img4} className="one" />      
             </Menu.Item>
             <Menu.Item>
               <img src={img5} />
@@ -88,34 +89,29 @@ function Sidebar() {
                 <Input placeholder="Search" prefix={<SearchOutlined />}></Input>
               </Col>
               <Col span={8}>
-                <Button
-                  type="primary"
-                  className="CreateBtn"
-                  onClick={showModal}
-                >
-                  Create Workflow
-                </Button>
-                <Modal
-                  title="Basic Modal"
-                  visible={isModalVisible}
-                  onOk={handleOk}
-                  onCancel={handleCancel}
-                  footer={null}
-                >
-                  <Row>
-                    <Col span={8}>
-                      <Imageselector />
-                    </Col>
-                    <Col span={16}>
-                      <Popupform />
-                    </Col>
-                  </Row>
-                </Modal>
+                <Popupform refresh={refresh}/>
               </Col>
             </Row>
           </Header>
           <Content>
-            <Map />
+            <div className="Cards">
+              {cardData.map((card: any, id) => {
+                // console.log(card.e_id);
+                return (
+                  <div className="mappingcard">
+                    <Cards
+                      // key={card.e_id}
+                      // image={card.image}
+                      name={card.name}
+                      designation={card.designation}
+                      employeedetails={card.employeedetails}
+                      refresh={refresh}
+                      // info2={card.details}
+                    />
+                  </div>
+                );
+              })}
+            </div>
           </Content>
         </Layout>
       </Layout>

@@ -4,6 +4,7 @@
 .Inputfield {
   border-bottom: 2px solid #2b78d4 !important;
 }
+
 .ant-upload.ant-upload-select-picture-card {
   width: 127px !important;
   height: 155px !important;
@@ -39,4 +40,24 @@ label:nth-child(2) {
   font-size: 12px;
   font-weight: 400;
   color: rgba(0, 47, 104, 1);
+  border-bottom: 1px solid #2b78d4 !important;
+}
+.ant-modal-header {
+  border-bottom: none !important;
+  border-top-left-radius: 40px !important;
+  border-top-right-radius: 40px !important;
+}
+.ant-modal-content {
+  border-radius: 15px !important;
+}
+.ant-upload.ant-upload-select-picture-card {
+  background-color: #d1dcf4 !important;
+}
+.ant-input .Inputfield1 {
+  margin-top: 20px;
+  border-bottom: 2px solid red !important;
+}
+.cancelBtn,
+.saveBtn {
+  margin-top: 5rem;
 }

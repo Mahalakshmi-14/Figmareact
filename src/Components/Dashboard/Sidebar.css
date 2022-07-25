@@ -74,3 +74,7 @@
   margin-top: -10px;
   line-height: 0.5715;
 }
+.ant-modal-title{
+ color:  rgba(167, 176, 195, 1);
+}
+

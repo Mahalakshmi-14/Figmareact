@@ -13,6 +13,7 @@ import React, { useState } from "react";
 import "antd/dist/antd.css";
 import "../Cards/Cards.css";
 import img1 from "../Images/L1.svg";
+import { constants } from "buffer";
 const { TextArea } = Input;
 // import "../Imageselector/Form.css";
 
@@ -20,15 +21,68 @@ type cardtype = {
   name: string;
   designation: string;
   employeedetails: string;
-  // info2: string;
-  // image: string;
+  refresh: any;
 };
 
 const Cards = (props: cardtype) => {
-  const [modal2Visible, setModal2Visible] = useState(false);
-  const [Employeename, setEmployeename] = useState("");
-  const [Designation, setDesignation] = useState("");
-  const [Employeedetails, setEmployeedetails] = useState("");
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [Employeename, setEmployeename] = useState(props.name);
+  const [Designation, setDesignation] = useState(props.designation);
+  const [Employeedetails, setEmployeedetails] = useState(props.employeedetails);
+
+  const EditFun = () => {
+    props.refresh();
+    let employeeDetail = JSON.parse(
+      `${localStorage.getItem("Employeedetails") || "[]"}`
+    );
+    console.log("Employeedetails", employeeDetail);
+    employeeDetail = employeeDetail.map((value: any) => {
+      if (
+        value.name === props.name &&
+        value.designation === props.designation &&
+        value.employeedetails === props.employeedetails
+      ) {
+        console.log("value.name", value.name);
+        console.log("name", props.name);
+        return {
+          ...value,
+          name: Employeename,
+          designation: Designation,
+          employeedetails: Employeedetails,
+        };
+      }
+      return value;
+    });
+
+    localStorage.setItem("Employeedetails", JSON.stringify(employeeDetail));
+    props.refresh();
+    setIsModalVisible(false);
+  };
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
+
+  const Deletefunction = () => {
+    let employeeDetail = JSON.parse(
+      `${localStorage.getItem("Employeedetails") || "[]"}`
+    );
+
+    for (let index = 0; index < employeeDetail.length; index++) {
+      if (
+        props.name === employeeDetail[index].name &&
+        props.designation === employeeDetail[index].designation
+      ) {
+        employeeDetail = [
+          ...employeeDetail.slice(0, index),
+          ...employeeDetail.slice(index + 1),
+        ];
+      }
+    }
+
+    localStorage.setItem("Employeedetails", JSON.stringify(employeeDetail));
+    // props.updateList(employeeDetail);
+    props.refresh();
+  };
   return (
     <>
       <Row>
@@ -56,12 +110,14 @@ const Cards = (props: cardtype) => {
                 </span>
                 <br></br>
                 <span>
-                  <Button className="deletebtn">Delete</Button>
+                  <Button className="deletebtn" onClick={Deletefunction}>
+                    Delete
+                  </Button>
                 </span>
                 <Button
                   className="viewdetailsbtn"
                   type="primary"
-                  onClick={() => setModal2Visible(true)}
+                  onClick={() => setIsModalVisible(true)}
                 >
                   View details
                 </Button>
@@ -69,9 +125,9 @@ const Cards = (props: cardtype) => {
                 <Modal
                   className="modalpopup"
                   centered
-                  visible={modal2Visible}
-                  onOk={() => setModal2Visible(false)}
-                  onCancel={() => setModal2Visible(false)}
+                  visible={isModalVisible}
+                  onOk={() => setIsModalVisible(false)}
+                  onCancel={handleCancel}
                   footer={null}
                 >
                   <div className="card-one">
@@ -98,30 +154,38 @@ const Cards = (props: cardtype) => {
                     <Form.Item label="Employee Name">
                       <Input
                         className="Inputfield"
-                        value={props.name}
-                        // onChange={(e) => setEmployeename(e.target.value)}
+                        value={Employeename}
+                        onChange={(e) => setEmployeename(e.target.value)}
                       />
                     </Form.Item>
 
                     <Form.Item label="Designation">
                       <Input
                         className="Inputfield"
-                        value={props.designation}
-                        // onChange={(e) => setDesignation(e.target.value)}
+                        value={Designation}
+                        onChange={(e) => setDesignation(e.target.value)}
                       />
                     </Form.Item>
                     <Form.Item className="empdetails" label="Employee Details">
                       <TextArea
                         rows={4}
                         className="Inputfield1"
-                        value={props.employeedetails}
-                        // onChange={(e) => setEmployeedetails(e.target.value)}
+                        value={Employeedetails}
+                        onChange={(e) => setEmployeedetails(e.target.value)}
                       />
                     </Form.Item>
 
-                    <Button>Cancel</Button>
+                    <Button className="cancelBtn" onClick={handleCancel}>
+                      Cancel
+                    </Button>
                     <span>
-                      <Button type="primary">Edit</Button>
+                      <Button
+                        type="primary"
+                        className="saveBtn"
+                        onClick={EditFun}
+                      >
+                        Edit{" "}
+                      </Button>
                     </span>
                   </Form>
                 </Modal>

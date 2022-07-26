@@ -18,6 +18,7 @@ const { TextArea } = Input;
 // import "../Imageselector/Form.css";
 
 type cardtype = {
+  id: any;
   name: string;
   designation: string;
   employeedetails: string;
@@ -80,7 +81,6 @@ const Cards = (props: cardtype) => {
     }
 
     localStorage.setItem("Employeedetails", JSON.stringify(employeeDetail));
-    // props.updateList(employeeDetail);
     props.refresh();
   };
   return (
@@ -121,7 +121,7 @@ const Cards = (props: cardtype) => {
                 >
                   View details
                 </Button>
-                {/* <Button>Delete</Button> */}
+                
                 <Modal
                   className="modalpopup"
                   centered

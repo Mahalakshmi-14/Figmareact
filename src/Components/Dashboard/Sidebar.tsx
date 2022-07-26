@@ -21,7 +21,6 @@ import img8 from "../Images/L8.png";
 import img9 from "../Images/L9.svg";
 // import img10 from "../Images/C1.png";
 
-
 import Popupform from "../Imageselector/Form";
 
 const style: React.CSSProperties = { background: "#0092ff", padding: "8px 0" };
@@ -42,6 +41,15 @@ function Sidebar() {
   const refresh = () => {
     setLoading(true);
   };
+  const [search, setNewsearch] = useState("");
+  let employeeDetail = JSON.parse(
+    `${localStorage.getItem("Employeedetails") || "[]"}`
+  );
+  let filtered = !search
+    ? employeeDetail
+    : employeeDetail.filter((card: any) =>
+        card.name.toLowerCase().includes(search.toLowerCase())
+      );
 
   return (
     <div>
@@ -64,7 +72,7 @@ function Sidebar() {
               <img src={img3} />
             </Menu.Item>
             <Menu.Item>
-              <img src={img4} className="one" />      
+              <img src={img4} className="one" />
             </Menu.Item>
             <Menu.Item>
               <img src={img5} />
@@ -86,22 +94,28 @@ function Sidebar() {
                 <p className="Workflow">Workflow</p>
               </Col>
               <Col span={8} className="SearchInput">
-                <Input placeholder="Search" prefix={<SearchOutlined />}></Input>
+                <Input
+                  placeholder="Search"
+                  value={search}
+                  onChange={(e) => setNewsearch(e.target.value)}
+                  prefix={<SearchOutlined />}
+                ></Input>
               </Col>
               <Col span={8}>
-                <Popupform refresh={refresh}/>
+                <Popupform refresh={refresh} />
               </Col>
             </Row>
           </Header>
           <Content>
             <div className="Cards">
-              {cardData.map((card: any, id) => {
+              {filtered.map((card: any, id: any) => {
                 // console.log(card.e_id);
                 return (
                   <div className="mappingcard">
                     <Cards
                       // key={card.e_id}
                       // image={card.image}
+                      id={card.id}
                       name={card.name}
                       designation={card.designation}
                       employeedetails={card.employeedetails}

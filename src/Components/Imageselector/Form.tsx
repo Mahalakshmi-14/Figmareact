@@ -26,7 +26,10 @@ const Popupform = (props: any) => {
     let formdetail = JSON.parse(
       `${localStorage.getItem("Employeedetails") || "[]"}`
     );
+    const date = new Date();
+    const time = date.getTime();
     const formValue = {
+      id: time,
       name: Employeename,
       designation: Designation,
       employeedetails: Employeedetails,
